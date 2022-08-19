@@ -46,6 +46,7 @@ header {
   .about__sun-image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s infinite linear;
   }
 
   .about {
@@ -130,7 +131,7 @@ header {
     padding: 0px 20px;
     border: none;
     border-radius: 15px;
-
+    outline: none;
   } 
   .form__submit {
     font-size: 18px;
@@ -149,7 +150,8 @@ header {
 
   button:hover {
     background-color: #f6980c;
-    box-shadow: 0 16px 36px rgba(246 152 12 / 20%;)
+    box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+    transition: background-color 0.3s ease-in;
   }
 
 
@@ -189,3 +191,10 @@ header {
   .footer__links a {
     margin-bottom: 15px;
   }
+
+  @keyframes rotation {
+    0% {transform: rotate(0deg);}   
+    100% {transform: rotate(360deg);}
+  }
+
+ 
