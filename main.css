@@ -306,6 +306,7 @@ header {
   background-color: #dd5f26;
   width: 50%;
   padding: 160px 60px;
+  
  }
  .promo{
   display: flex;
@@ -501,10 +502,17 @@ header {
       height: 500px;
       width: auto;
       padding: 50px 10px;
-      
+      display: flex;
     }
+    
     .promo{
       display: flex;
       flex-direction: column-reverse;
      } 
+     .promo__right__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
  }
