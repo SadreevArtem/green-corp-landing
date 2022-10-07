@@ -299,7 +299,7 @@ header {
   background-image: url(img/promo.jpg);
   background-size: cover;
   width: 50%;
-  height: auto;
+  
   flex-shrink: 0;
  }
  .promo__right {
@@ -341,6 +341,15 @@ header {
  .promo__right__card__container {
   display: flex;
   justify-content: center;
+ }
+ .orb-canvas {
+  position: absolute;
+  top: 0; 
+  right: 0;
+  height: 100%;
+ }
+ .about {
+  position: relative;
  }
  
 
