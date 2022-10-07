@@ -22,7 +22,7 @@ class Bubble {
    init() {
        this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
        this.alpha = generateDecimalBetween(5, 10) / 10;
-       this.size = generateDecimalBetween(3, 9);
+       this.size = generateDecimalBetween(1, 3);
        this.translateX = generateDecimalBetween(0, this.canvasWidth);
        this.translateY = generateDecimalBetween(0, this.canvasHeight);
        this.velocity = generateDecimalBetween(20, 40);
