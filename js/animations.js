@@ -1,4 +1,5 @@
 const INCREASE_NUMBER_ANIMATION_SPEED = 50;
+let animationInited = false;
 
 
 function increaseNumberAnimationStep (i, element, endNumber) {
@@ -20,7 +21,7 @@ function increaseNumberAnimationStep (i, element, endNumber) {
     let element = document.querySelector('.features__clients-count');
     increaseNumberAnimationStep(0, element, 5000)
   }
-  initIncreaseNumberAnimation();
+  // initIncreaseNumberAnimation();
 
   document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
     if (event.target.value === 'other') {
@@ -44,5 +45,23 @@ function increaseNumberAnimationStep (i, element, endNumber) {
     }
   });
 
- 
+  function updateScroll (){
+    if (window.scrollY > 0) {
+      const elem = document.querySelector('header');
+      elem.classList.add('header__scrolled')
+      
+    } else {
+      const elem = document.querySelector('header');
+      elem.classList.remove('header__scrolled')
+    }
+    // Запуск анимации увеличения числа
+  let windowBottomPosition = window.scrollY + window.innerHeight;
+  let countElementPosition = document.querySelector('.features__clients-count').offsetTop;
+    if(windowBottomPosition>=countElementPosition&&!animationInited){
+      animationInited = true;
+      initIncreaseNumberAnimation();
+    }
+  }
+
+ window.addEventListener('scroll', updateScroll)
  
